@@ -1,3 +1,4 @@
+```html id="u9p4dz"
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -17,72 +18,66 @@
 }
 
 body {
-  background: #f8f8f8;
+  background: #f4f4f4;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
+  padding: 20px;
 }
 
 /* CONTAINER */
 
 .wrapper {
   width: 100%;
-  max-width: 700px;
-  padding: 40px;
+  max-width: 680px;
 }
 
 .certificate {
   background: #ffffff;
-  padding: 70px 50px;
-  border: 1px solid #dcdcdc;
+  padding: 60px 40px;
+  border: 1px solid #e0e0e0;
   text-align: center;
   position: relative;
 }
 
-/* LINHAS FINAS DECORATIVAS */
+/* LINHAS */
 
 .certificate::before,
 .certificate::after {
   content: "";
   position: absolute;
-  left: 30px;
-  right: 30px;
+  left: 20px;
+  right: 20px;
   height: 1px;
-  background: #e5e5e5;
+  background: #eaeaea;
 }
 
-.certificate::before {
-  top: 25px;
-}
-
-.certificate::after {
-  bottom: 25px;
-}
+.certificate::before { top: 20px; }
+.certificate::after { bottom: 20px; }
 
 /* HEADER */
 
 .brand {
   font-family: 'Inter', sans-serif;
-  font-size: 11px;
-  letter-spacing: 4px;
-  color: #555;
-  margin-bottom: 20px;
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: #666;
+  margin-bottom: 15px;
 }
 
 .title {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 34px;
-  letter-spacing: 1px;
-  margin-bottom: 15px;
+  font-size: 32px;
+  margin-bottom: 10px;
 }
 
 .subtitle {
   font-family: 'Inter', sans-serif;
-  font-size: 12px;
+  font-size: 11px;
   letter-spacing: 2px;
-  color: #888;
-  margin-bottom: 40px;
+  color: #999;
+  margin-bottom: 30px;
 }
 
 /* TEXTO */
@@ -91,9 +86,8 @@ body {
   font-family: 'Inter', sans-serif;
   font-size: 14px;
   color: #333;
-  line-height: 1.8;
-  max-width: 480px;
-  margin: 0 auto 40px;
+  line-height: 1.7;
+  margin-bottom: 30px;
 }
 
 /* INFO */
@@ -101,9 +95,8 @@ body {
 .info {
   font-family: 'Inter', sans-serif;
   font-size: 13px;
-  color: #000;
-  line-height: 2;
-  margin-bottom: 40px;
+  line-height: 1.9;
+  margin-bottom: 30px;
 }
 
 /* SELO */
@@ -111,15 +104,15 @@ body {
 .seal {
   display: inline-block;
   border: 1px solid #000;
-  padding: 15px 25px;
+  padding: 12px 20px;
   font-family: 'Inter', sans-serif;
-  font-size: 11px;
+  font-size: 10px;
   letter-spacing: 2px;
 }
 
 .seal strong {
   display: block;
-  font-size: 14px;
+  font-size: 13px;
   margin-top: 5px;
 }
 
@@ -129,19 +122,43 @@ body {
   font-family: 'Inter', sans-serif;
   font-size: 11px;
   color: #777;
-  margin-top: 50px;
+  margin-top: 40px;
   line-height: 1.6;
 }
 
-/* PRINT */
+/* 🔥 RESPONSIVO REAL */
+
+@media (max-width: 480px) {
+
+  body {
+    padding: 10px;
+  }
+
+  .certificate {
+    padding: 40px 20px;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+
+  .text {
+    font-size: 13px;
+  }
+
+  .info {
+    font-size: 12px;
+  }
+
+  .seal {
+    padding: 10px 16px;
+  }
+
+}
 
 @media print {
   body {
     background: white;
-    height: auto;
-  }
-
-  .wrapper {
     padding: 0;
   }
 
