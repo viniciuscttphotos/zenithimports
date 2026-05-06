@@ -1,129 +1,191 @@
-
 ```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Certificado de Autenticidade | Zenith Imports</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
-    }
+<title>Certificado de Autenticidade | Zenith Imports</title>
 
-    body {
-      background: #ffffff;
-      color: #000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
-    .container {
-      max-width: 600px;
-      width: 90%;
-      text-align: center;
-      border: 1px solid #000;
-      padding: 50px 30px;
-    }
+<style>
 
-    .logo {
-      font-size: 14px;
-      letter-spacing: 3px;
-      margin-bottom: 20px;
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    h1 {
-      font-size: 22px;
-      letter-spacing: 2px;
-      margin-bottom: 30px;
-    }
+body {
+  background: #f8f8f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
 
-    .divider {
-      width: 60px;
-      height: 1px;
-      background: #000;
-      margin: 20px auto 30px;
-    }
+/* CONTAINER */
 
-    .text {
-      font-size: 14px;
-      line-height: 1.7;
-      margin-bottom: 30px;
-    }
+.wrapper {
+  width: 100%;
+  max-width: 700px;
+  padding: 40px;
+}
 
-    .info {
-      font-size: 13px;
-      line-height: 1.8;
-      margin-bottom: 30px;
-    }
+.certificate {
+  background: #ffffff;
+  padding: 70px 50px;
+  border: 1px solid #dcdcdc;
+  text-align: center;
+  position: relative;
+}
 
-    .status {
-      font-size: 14px;
-      margin-top: 20px;
-      letter-spacing: 1px;
-    }
+/* LINHAS FINAS DECORATIVAS */
 
-    .status strong {
-      display: block;
-      margin-top: 5px;
-      font-size: 16px;
-    }
+.certificate::before,
+.certificate::after {
+  content: "";
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  height: 1px;
+  background: #e5e5e5;
+}
 
-    .footer {
-      font-size: 11px;
-      margin-top: 40px;
-      opacity: 0.7;
-    }
+.certificate::before {
+  top: 25px;
+}
 
-    @media print {
-      body {
-        height: auto;
-      }
+.certificate::after {
+  bottom: 25px;
+}
 
-      .container {
-        border: 1px solid #000;
-        page-break-inside: avoid;
-      }
-    }
-  </style>
+/* HEADER */
+
+.brand {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 34px;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #888;
+  margin-bottom: 40px;
+}
+
+/* TEXTO */
+
+.text {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.8;
+  max-width: 480px;
+  margin: 0 auto 40px;
+}
+
+/* INFO */
+
+.info {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: #000;
+  line-height: 2;
+  margin-bottom: 40px;
+}
+
+/* SELO */
+
+.seal {
+  display: inline-block;
+  border: 1px solid #000;
+  padding: 15px 25px;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.seal strong {
+  display: block;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* FOOTER */
+
+.footer {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  color: #777;
+  margin-top: 50px;
+  line-height: 1.6;
+}
+
+/* PRINT */
+
+@media print {
+  body {
+    background: white;
+    height: auto;
+  }
+
+  .wrapper {
+    padding: 0;
+  }
+
+  .certificate {
+    border: none;
+  }
+}
+
+</style>
 </head>
 
 <body>
 
-  <div class="container">
+<div class="wrapper">
+  <div class="certificate">
 
-    <div class="logo">ZENITH IMPORTS</div>
+    <div class="brand">ZENITH IMPORTS</div>
 
-    <h1>CERTIFICADO DE AUTENTICIDADE</h1>
-
-    <div class="divider"></div>
+    <div class="title">Certificado de Autenticidade</div>
+    <div class="subtitle">QUALITY ASSURANCE DOCUMENT</div>
 
     <div class="text">
-      Este produto foi fornecido pela Zenith Imports e atende aos padrões de qualidade e procedência estabelecidos pela empresa.
+      Este documento certifica que o produto associado a este código foi fornecido pela Zenith Imports, atendendo aos critérios internos de procedência, seleção e controle de qualidade estabelecidos pela marca.
     </div>
 
     <div class="info">
       Origem: Zenith Imports<br>
-      Lote: Maio/2026<br>
+      Lote: Maio de 2026<br>
       Verificação realizada via QR Code
     </div>
 
-    <div class="status">
+    <div class="seal">
       STATUS
       <strong>PRODUTO ORIGINAL</strong>
     </div>
 
     <div class="footer">
-      Este certificado acompanha o produto como garantia de procedência.
+      Este certificado acompanha o produto como garantia de procedência.<br>
+      Cada item distribuído pela Zenith Imports possui identificação própria.
     </div>
 
   </div>
+</div>
 
 </body>
 </html>
