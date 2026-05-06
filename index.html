@@ -38,27 +38,6 @@ body {
   border: 1px solid #e0e0e0;
   text-align: center;
   position: relative;
-  overflow: hidden;
-}
-
-/* 🔥 WATERMARK REAL */
-
-.watermark {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 280px;
-  transform: translate(-50%, -50%);
-  opacity: 0.05;
-  pointer-events: none;
-  z-index: 0;
-}
-
-/* GARANTE QUE O CONTEÚDO FIQUE NA FRENTE */
-
-.certificate > *:not(.watermark) {
-  position: relative;
-  z-index: 1;
 }
 
 /* LINHAS */
@@ -72,7 +51,6 @@ body {
   bottom: 20px;
   border-top: 1px solid #eaeaea;
   border-bottom: 1px solid #eaeaea;
-  z-index: 0;
 }
 
 /* HEADER */
@@ -135,13 +113,25 @@ body {
   margin-top: 5px;
 }
 
+/* LOGO FINAL */
+
+.logo {
+  margin-top: 40px;
+}
+
+.logo img {
+  max-width: 120px;
+  width: 100%;
+  opacity: 0.85;
+}
+
 /* FOOTER */
 
 .footer {
   font-family: 'Inter', sans-serif;
   font-size: 11px;
   color: #777;
-  margin-top: 40px;
+  margin-top: 25px;
   line-height: 1.6;
 }
 
@@ -169,8 +159,8 @@ body {
     padding: 10px 16px;
   }
 
-  .watermark {
-    width: 200px;
+  .logo img {
+    max-width: 100px;
   }
 
 }
@@ -196,16 +186,13 @@ body {
 <div class="wrapper">
   <div class="certificate">
 
-    <!-- 🔥 LOGO WATERMARK -->
-    <img src="./assets/zyntralogo.webp" class="watermark" alt="">
-
     <div class="brand">ZYNTRA – ADVANCED PEPTIDE THERAPY</div>
 
     <div class="title">Certificado de Autenticidade</div>
     <div class="subtitle">QUALITY ASSURANCE DOCUMENT</div>
 
     <div class="text">
-      Este documento certifica que o produto associado a este código integra a linha de hormônios, peptídeos e ergogênicos distribuídos pela Zyntra.
+      Este documento certifica que o produto associado a este código integra a linha de peptídeos distribuídos pela Zyntra.
       <br><br>
       A Zyntra atesta a procedência do item, bem como sua inclusão em um processo interno de seleção, conferência e controle de qualidade, adotado para garantir consistência, rastreabilidade e padrão elevado de fornecimento.
     </div>
@@ -224,6 +211,10 @@ body {
 
     <div style="margin-top:10px; font-size:11px; letter-spacing:1px;">
       DOCUMENTO DE AUTENTICAÇÃO E PROCEDÊNCIA
+    </div>
+
+    <div class="logo">
+      <img src="./assets/zyntralogo.webp" alt="Zyntra Logo">
     </div>
 
     <div class="footer">
