@@ -41,20 +41,24 @@ body {
   overflow: hidden;
 }
 
-/* 🔥 LOGO COMO WATERMARK */
+/* 🔥 WATERMARK REAL */
 
-.certificate::before {
-  content: "";
+.watermark {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 300px;
-  height: 300px;
-  background: url('/assets/zyntralogo.webp') no-repeat center;
-  background-size: contain;
+  width: 280px;
   transform: translate(-50%, -50%);
   opacity: 0.05;
   pointer-events: none;
+  z-index: 0;
+}
+
+/* GARANTE QUE O CONTEÚDO FIQUE NA FRENTE */
+
+.certificate > *:not(.watermark) {
+  position: relative;
+  z-index: 1;
 }
 
 /* LINHAS */
@@ -68,6 +72,7 @@ body {
   bottom: 20px;
   border-top: 1px solid #eaeaea;
   border-bottom: 1px solid #eaeaea;
+  z-index: 0;
 }
 
 /* HEADER */
@@ -78,16 +83,12 @@ body {
   letter-spacing: 3px;
   color: #666;
   margin-bottom: 15px;
-  position: relative;
-  z-index: 1;
 }
 
 .title {
   font-family: 'Cormorant Garamond', serif;
   font-size: 32px;
   margin-bottom: 10px;
-  position: relative;
-  z-index: 1;
 }
 
 .subtitle {
@@ -96,8 +97,6 @@ body {
   letter-spacing: 2px;
   color: #999;
   margin-bottom: 30px;
-  position: relative;
-  z-index: 1;
 }
 
 /* TEXTO */
@@ -108,8 +107,6 @@ body {
   color: #333;
   line-height: 1.7;
   margin-bottom: 30px;
-  position: relative;
-  z-index: 1;
 }
 
 /* INFO */
@@ -119,8 +116,6 @@ body {
   font-size: 13px;
   line-height: 1.9;
   margin-bottom: 30px;
-  position: relative;
-  z-index: 1;
 }
 
 /* SELO */
@@ -132,8 +127,6 @@ body {
   font-family: 'Inter', sans-serif;
   font-size: 10px;
   letter-spacing: 2px;
-  position: relative;
-  z-index: 1;
 }
 
 .seal strong {
@@ -150,8 +143,6 @@ body {
   color: #777;
   margin-top: 40px;
   line-height: 1.6;
-  position: relative;
-  z-index: 1;
 }
 
 /* RESPONSIVO */
@@ -178,9 +169,8 @@ body {
     padding: 10px 16px;
   }
 
-  .certificate::before {
+  .watermark {
     width: 200px;
-    height: 200px;
   }
 
 }
@@ -206,6 +196,9 @@ body {
 <div class="wrapper">
   <div class="certificate">
 
+    <!-- 🔥 LOGO WATERMARK -->
+    <img src="./assets/zyntralogo.webp" class="watermark" alt="">
+
     <div class="brand">ZYNTRA – ADVANCED PEPTIDE THERAPY</div>
 
     <div class="title">Certificado de Autenticidade</div>
@@ -218,7 +211,7 @@ body {
     </div>
 
     <div class="info">
-      Categoria: Hormônios, Peptídeos e Ergogênicos<br>
+      Categoria: Peptídeos<br>
       Origem: Zyntra<br>
       Lote: Maio de 2026<br>
       Verificação realizada via QR Code
